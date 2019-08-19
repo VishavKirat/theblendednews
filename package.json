@@ -1,0 +1,22 @@
+{
+  "name": "the_blended_paper",
+  "version": "1.0.0",
+  "description": "This is a news app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "react",
+    "webpack",
+    "html",
+    "css",
+    "react",
+    "web-development",
+    "news",
+    "newspaper"
+  ],
+  "author": "Vishav Kirat Singh",
+  "license": "MIT"
+}
