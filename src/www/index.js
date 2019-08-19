@@ -1,19 +1,16 @@
-import express from 'express'
-import cors from 'cors'
-import dotenv from 'dotenv'
-import morgan from 'morgan'
-import path from 'path'
-import router from './api-routes/router'
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import morgan from 'morgan';
+import path from 'path';
+import router from './api-routes/router';
 
-// initalize 
+// initalize
 const app = express();
-dotenv.config({path:path.resolve(__dirname,'../../variable.env')})
+dotenv.config({ path: path.resolve(__dirname, '../../variable.env') });
 
-app.use(
-    cors(),
-    morgan('dev')
-)
-app.use('/api',router)
+app.use(cors(), morgan('dev'));
+app.use('/api', router);
 Promise.resolve(app.listen(process.env.PORT || 3000))
-        .then((response)=>console.info('Server is running at port : ',process.env.PORT))
-        .catch((error)=> console.error(error));
+  .then(() => console.info('Server is running at port : ', process.env.PORT))
+  .catch((error) => console.error(error));

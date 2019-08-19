@@ -1,5 +1,5 @@
 {
-  "name": "the_blended_paper",
+  "name": "the_blended_ink",
   "version": "1.0.0",
   "description": "This is a news app.",
   "main": "src/www/index.js",
@@ -39,6 +39,15 @@
     "redux-logger": "^3.0.6",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.3"
   }
 }
