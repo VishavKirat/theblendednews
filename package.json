@@ -5,7 +5,9 @@
   "main": "src/www/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/www/index.js"
+    "dev": "nodemon --exec babel-node src/www/index.js",
+    "start": "babel-node src/www/index.js",
+    "debug-dev": "DEBUG=express:* babel-node src/www/index.js"
   },
   "keywords": [
     "nodejs",
