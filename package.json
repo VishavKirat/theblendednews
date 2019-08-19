@@ -2,9 +2,10 @@
   "name": "the_blended_paper",
   "version": "1.0.0",
   "description": "This is a news app.",
-  "main": "index.js",
+  "main": "src/www/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/www/index.js"
   },
   "keywords": [
     "nodejs",
@@ -18,5 +19,24 @@
     "newspaper"
   ],
   "author": "Vishav Kirat Singh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "cors": "^2.8.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "redux-logger": "^3.0.6",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
 }
