@@ -16,7 +16,10 @@ module.exports.top_headlines = (req, res) => {
       .then((payload) => newsCluster.push(payload.data.articles)),
   );
   return Promise.all(promises).then(() => {
-    const newsArr = newsCluster.reduce((a, c) => a.concat(c), []);
+    const uniqNews = {};
+    const newsArr = newsCluster
+      .reduce((a, c) => a.concat(c), [])
+      .filter((obj) => !uniqNews[obj.title] && (uniqNews[obj.title] = true));
     res.json(newsArr);
   });
 };
