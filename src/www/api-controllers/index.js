@@ -20,6 +20,6 @@ module.exports.top_headlines = (req, res) => {
     const newsArr = newsCluster
       .reduce((a, c) => a.concat(c), [])
       .filter((obj) => !uniqNews[obj.title] && (uniqNews[obj.title] = true));
-    res.json(newsArr);
+    res.json(newsArr.length);
   });
 };
