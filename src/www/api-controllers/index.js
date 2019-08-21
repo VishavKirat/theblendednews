@@ -7,7 +7,7 @@ const url = 'https://newsapi.org/v2';
 dotenv.config(path.resolve(__dirname, '../../../../variable.env'));
 
 module.exports.top_headlines = (req, res) => {
-  const countriesArr = ['au', 'in', 'us', 'ca', 'fr'];
+  const countriesArr = ['in'];
   const newsCluster = [];
   res.setHeader('Content-Type', 'application/json');
   const promises = countriesArr.map((item) =>
@@ -20,6 +20,6 @@ module.exports.top_headlines = (req, res) => {
     const newsArr = newsCluster
       .reduce((a, c) => a.concat(c), [])
       .filter((obj) => !uniqNews[obj.title] && (uniqNews[obj.title] = true));
-    res.json(newsArr.length);
+    res.json(newsArr);
   });
 };
