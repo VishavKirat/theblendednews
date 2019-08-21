@@ -8,14 +8,16 @@ dotenv.config(path.resolve(__dirname, '../../../../variable.env'));
 
 module.exports.top_headlines = (req, res) => {
   const countriesArr = ['in'];
+  let contentCount = 0;
   const newsCluster = [];
   res.setHeader('Content-Type', 'application/json');
   const promises = countriesArr.map((item) =>
     axios
-      .get(`${url}/top-headlines?country=${item}&apiKey=${process.env.NEWS_API_KEY}`)
-      .then((payload) => newsCluster.push(payload.data.articles)),
+      .get(`${url}/top-headlines?country=${item}&pagesize=100&apiKey=${process.env.NEWS_API_KEY}`)
+      .then((payload) => ((contentCount = payload.data), newsCluster.push(payload.data.articles))),
   );
   return Promise.all(promises).then(() => {
+    console.log(contentCount.totalResults);
     const uniqNews = {};
     const newsArr = newsCluster
       .reduce((a, c) => a.concat(c), [])
