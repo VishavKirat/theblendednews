@@ -14,14 +14,17 @@ module.exports.top_headlines = (req, res) => {
   const promises = countriesArr.map((item) =>
     axios
       .get(`${url}/top-headlines?country=${item}&pagesize=100&apiKey=${process.env.NEWS_API_KEY}`)
-      .then((payload) => ((contentCount = payload.data), newsCluster.push(payload.data.articles))),
+      .then(
+        (payload) => (
+          (contentCount = payload.data.totalResults), newsCluster.push(payload.data.articles)
+        ),
+      ),
   );
   return Promise.all(promises).then(() => {
-    console.log(contentCount.totalResults);
     const uniqNews = {};
     const newsArr = newsCluster
       .reduce((a, c) => a.concat(c), [])
       .filter((obj) => !uniqNews[obj.title] && (uniqNews[obj.title] = true));
-    res.json(newsArr);
+    res.json({ totalResults: contentCount, content: newsArr });
   });
 };
