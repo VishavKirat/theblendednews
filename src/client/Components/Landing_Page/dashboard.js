@@ -25,15 +25,52 @@ class dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard">
-        {!this.state.loading ? (
-          <div className="topHeadlines">
-            {this.state.top_headlines.map((headline, index) => (
-              <TopHeadlines top_headlines={headline} key={index} />
-            ))}
+        <div
+          className="landing-top-headlines"
+          style={{
+            border: '2px solid black',
+            position: 'relative',
+            paddingTop: '0.5rem',
+            fontSize: '16px',
+          }}
+        >
+          <h2
+            style={{
+              marginTop: '0',
+              position: 'absolute',
+              top: '-11px',
+              left: '15px',
+              backgroundColor: 'white',
+              padding: '0 0.5rem',
+              cursor: 'pointer',
+              fontSize: '2vmax',
+            }}
+          >
+            Top Headlines
+          </h2>
+          <div
+            style={{
+              position: 'absolute',
+              top: '-9px',
+              fontSize: '12px',
+              right: '15px',
+              backgroundColor: 'white',
+              padding: '0 0.5rem',
+              cursor: 'pointer',
+            }}
+          >
+            See All >
           </div>
-        ) : (
-          '... Loading'
-        )}
+          {!this.state.loading ? (
+            <div className="topHeadlines">
+              {this.state.top_headlines.map((headline, index) =>
+                index < 6 ? <TopHeadlines top_headlines={headline} key={index} /> : null,
+              )}
+            </div>
+          ) : (
+            '... Loading'
+          )}
+        </div>
       </div>
     );
   }
