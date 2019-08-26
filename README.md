@@ -2,7 +2,7 @@
 
 The Blended Ink is a Web application for latest news.
 
-##Get Started
+## Get Started
 
 After cloning this project runn the following commands.
 
