@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import TopHeadlines from './TopHeadlines';
+// import './landingPage.css';
 
 class dashboard extends React.Component {
   state = {
@@ -28,7 +29,8 @@ class dashboard extends React.Component {
         <div
           className="landing-top-headlines"
           style={{
-            border: '2px solid black',
+            borderTop: '2px solid black',
+            borderBottom: '2px solid black',
             position: 'relative',
             paddingTop: '0.5rem',
             fontSize: '16px',

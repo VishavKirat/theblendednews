@@ -11,6 +11,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../variable.env') });
 
 app.use(cors(), morgan('dev'));
 app.use('/api', router);
+
 Promise.resolve(app.listen(process.env.PORT || 3000))
   .then(() => console.info('Server is running at port : ', process.env.PORT))
   .catch((error) => console.error(error));

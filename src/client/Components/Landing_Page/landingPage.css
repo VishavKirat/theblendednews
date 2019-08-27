@@ -1,0 +1,16 @@
+.topHeadlines {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  height: 25vh;
+  width: 100%;
+}
+.topheadline-single {
+  width: 250px;
+  height: 100px;
+  flex: 0 0 auto;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}

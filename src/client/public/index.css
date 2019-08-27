@@ -18,7 +18,35 @@ body {
   height: auto;
 }
 
-.dashboard {
+img {
   width: 100%;
-  padding: 1rem 1rem;
+  margin: 0 auto;
+}
+.topHeadlines {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  min-height: 38vh;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+.topheadline-single {
+  width: 300px;
+  height: 100px;
+  flex: 0 0 auto;
+  margin-top: 1.3vmax;
+  padding: 0 0.7rem;
+  margin-bottom: 1.3vmax;
+}
+.topheadline-single img {
+  width: 180px;
+  height: 100%;
+  object-fit: contain;
+  /* height: 100px; */
 }
