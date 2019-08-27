@@ -30,7 +30,6 @@ class dashboard extends React.Component {
           className="landing-top-headlines"
           style={{
             borderTop: '2px solid black',
-            borderBottom: '2px solid black',
             position: 'relative',
             paddingTop: '0.5rem',
             fontSize: '16px',
@@ -61,12 +60,12 @@ class dashboard extends React.Component {
               cursor: 'pointer',
             }}
           >
-            See All >
+            See All
           </div>
           {!this.state.loading ? (
             <div className="topHeadlines">
               {this.state.top_headlines.map((headline, index) =>
-                index < 6 ? <TopHeadlines top_headlines={headline} key={index} /> : null,
+                index < 10 ? <TopHeadlines top_headlines={headline} key={index} /> : null,
               )}
             </div>
           ) : (
