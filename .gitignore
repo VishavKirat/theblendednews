@@ -1,5 +1,6 @@
 node_modules
 .env
+variable.env
 .vscode
 /dist
-variable.env
+./variable.env

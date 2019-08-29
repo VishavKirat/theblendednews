@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --html-background: #242424;
+}
 * {
   box-sizing: border-box;
 }
@@ -5,12 +10,15 @@
 html {
   margin: 0;
   padding: 0;
+  color: white;
+  background-color: var(--html-background);
 }
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 #root {
@@ -29,15 +37,16 @@ img {
   overflow-x: scroll;
   overflow-y: hidden;
   flex-wrap: nowrap;
-  min-height: 38vh;
+  min-height: 42vh;
   height: auto;
+
   width: 100%;
   margin: 0 auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
 }
 .topheadline-single {
-  width: 300px;
+  width: 280px;
   height: 100px;
   flex: 0 0 auto;
   margin-top: 1.3vmax;

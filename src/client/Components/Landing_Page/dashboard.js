@@ -29,7 +29,7 @@ class dashboard extends React.Component {
         <div
           className="landing-top-headlines"
           style={{
-            borderTop: '2px solid black',
+            borderTop: '2px solid white',
             position: 'relative',
             paddingTop: '0.5rem',
             fontSize: '16px',
@@ -41,13 +41,13 @@ class dashboard extends React.Component {
               position: 'absolute',
               top: '-11px',
               left: '15px',
-              backgroundColor: 'white',
+              backgroundColor: 'var(--html-background)',
               padding: '0 0.5rem',
               cursor: 'pointer',
               fontSize: '2vmax',
             }}
           >
-            Top Headlines
+            TOP NEWS STORIES
           </h2>
           <div
             style={{
@@ -55,7 +55,7 @@ class dashboard extends React.Component {
               top: '-9px',
               fontSize: '12px',
               right: '15px',
-              backgroundColor: 'white',
+              backgroundColor: 'var(--html-background)',
               padding: '0 0.5rem',
               cursor: 'pointer',
             }}
