@@ -26,22 +26,14 @@ class dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard">
-        <div
-          className="landing-top-headlines"
-          style={{
-            borderTop: '2px solid white',
-            position: 'relative',
-            paddingTop: '0.5rem',
-            fontSize: '16px',
-          }}
-        >
+        <div className="landing-top-headlines">
           <h2
             style={{
               marginTop: '0',
               position: 'absolute',
               top: '-11px',
               left: '15px',
-              backgroundColor: 'var(--html-background)',
+              background: 'var(--html-background)',
               padding: '0 0.5rem',
               cursor: 'pointer',
               fontSize: '2vmax',
