@@ -1,4 +1,3 @@
-import express from 'express';
 import axios from 'axios';
 import path from 'path';
 import dotenv from 'dotenv';
@@ -28,3 +27,5 @@ module.exports.top_headlines = (req, res) => {
     res.json({ totalResults: contentCount, content: newsArr });
   });
 };
+
+module.exports.singlenewspost = (req, res) => res.send(req.params.id);
