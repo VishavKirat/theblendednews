@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import dashboard from './Landing_Page/dashboard';
+import SingleNewsPost from './SingleNewsPost';
 
 class AppRouter extends Component {
   render() {
@@ -8,6 +9,7 @@ class AppRouter extends Component {
       <BrowserRouter>
         <h1>The Blended Ink</h1>
         <Route exact path="/" component={dashboard} />
+        <Route exact path="/news/:id" component={SingleNewsPost} />
       </BrowserRouter>
     );
   }
