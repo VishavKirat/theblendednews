@@ -28,4 +28,14 @@ module.exports.top_headlines = (req, res) => {
   });
 };
 
-module.exports.singlenewspost = (req, res) => res.send(req.params.id);
+module.exports.singlelatestnewspost = async (req, res) => {
+  try {
+    await axios
+      .get(
+        `${url}/top-headlines?q=Court fights over Trump tax returns ramp up | TheHill&apiKey=${process.env.NEWS_API_KEY}`,
+      )
+      .then((payload) => res.json(payload.data));
+  } catch (error) {
+    return res.send('oops');
+  }
+};
